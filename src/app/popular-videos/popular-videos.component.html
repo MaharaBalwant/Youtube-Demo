@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row text-center">
+        <div class="col-md-12">
+            <h3>Popular Videos List</h3>
+        </div>
+        <div class="col-md-12">
+            <table class="table table-bordered table-hover">
+                <thead class="thead-light">
+                    <tr>
+                        <th>#</th>
+                        <th>Title</th>
+                        <th>Video</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of dataArray">
+                        <td></td>
+                        <td><a href="javascript:void(0)" (click)="showDetails(data.id)">{{data?.snippet?.title}}</a></td>
+                        <td><img src="{{data?.snippet?.thumbnails?.default?.url}}" /></td>
+                        <td><button class="btn btn-primary" (click)="uploadDetails(data.id)">upload</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
